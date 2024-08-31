@@ -1,0 +1,97 @@
+<html>
+    <head>
+        <title>calculator</title>
+        <style>
+            body{
+                margin:0;
+                display:flex;
+                align-items: center;
+                justify-content: center;
+                height:100vh;
+                background-color: blanchedalmond;
+                
+
+            }
+            .call{
+                font-family: Arial, Helvetica, sans-serif;
+                background-color: black;
+                overflow: hidden;
+                max-width: 440px;
+                max-height: 700px;
+                border-radius: 15px;
+               
+
+            }
+
+            #keys{
+                display:grid;
+                grid-template-columns: repeat(4,1fr);
+                gap:10px;
+                padding:25px;
+              
+            }
+            #display{
+                width: 100%;
+                padding:20px;
+                font-size:5rem;
+                text-align: left;
+            }
+            button{
+                width:80px;
+                height:80px;
+                border-radius: 50px;
+                background-color: rgba(138, 130, 130, 0.61);
+                color:white;
+                font-size: 3rem;
+                cursor:pointer;
+                border:none;
+                
+
+            }
+            button:hover{
+                background-color:  rgba(167, 164, 164, 0.61);
+
+            }
+            button:active {
+                background-color:  rgba(202, 198, 198, 0.61);
+            }
+            .operator:hover{
+                background-color: rgb(253, 167, 8);
+            }
+            .operator{
+                background-color: rgb(231, 155, 13);
+            }
+         
+            
+
+        </style>
+
+    </head>
+    <body>
+        <div class="call">
+            <input  id="display" readonly>
+            <div id="keys">
+                <button onclick="appendchild('+')" class="operator">+</button>
+                <button onclick="appendchild('7')">7</button>
+                <button onclick="appendchild('8')">8</button>
+                <button onclick="appendchild('9')">9</button>
+                <button onclick="appendchild('-')" class="operator">-</button>
+                <button onclick="appendchild('4')">4</button>
+                <button onclick="appendchild('5')">5</button>
+                <button onclick="appendchild('6')">6</button>
+                <button onclick="appendchild('*')" class="operator">*</button>
+                <button onclick="appendchild('1')">1</button>
+                <button onclick="appendchild('2')">2</button>
+                <button onclick="appendchild('3')">3</button>
+                <button onclick="appendchild('/')" class="operator">/</button>
+                <button onclick="appendchild('0')">0</button>
+                <button onclick="appendchild('.')">.</button>
+                <button onclick="calculate()">=</button>
+                <button onclick="clears()" class="operator">c</button>
+            </div>
+        </div>
+    </body>
+    <script src="cal.js">
+
+    </script>
+</html>
